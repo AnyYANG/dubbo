@@ -18,7 +18,7 @@ public class SPIDubboTest {
         ExtensionLoader<Car> extensionLoader = ExtensionLoader.getExtensionLoader(Car.class);
         Car mycar = extensionLoader.getExtension("adaptivecar");
         URL url = new URL("dubbo","www.liuyang.com",10086,"path");
-        url.addParameters("car","red");
+        url = url.addParameters("car","red");
         mycar.getColorUrl(url);
         try {
             System.in.read();

@@ -14,6 +14,6 @@ import com.alibaba.dubbo.common.extension.SPI;
 public interface Car {
     void getColor();
     //@Adaptive("mycar")
-    @Adaptive("url.car")
+    @Adaptive("car")
     void getColorUrl(URL url);
 }
