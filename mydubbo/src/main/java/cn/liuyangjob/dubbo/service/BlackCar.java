@@ -19,5 +19,4 @@ public class BlackCar  implements Car {
     public void getColorUrl(URL url) {
         System.out.println("black Car");
     }
-
 }

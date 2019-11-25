@@ -18,7 +18,6 @@ public class AdaptiveCar implements Car {
     public void getColor() {
         System.out.println("adaptiveCar");
     }
-
     @Override
     public void getColorUrl(URL url) {
         System.out.println("adaptive class");
