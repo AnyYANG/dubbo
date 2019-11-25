@@ -1,8 +1,7 @@
 package cn.liuyangjob.dubbo.service;
 
-import cn.liuyangjob.dubbo.api.car;
+import cn.liuyangjob.dubbo.api.Car;
 import com.alibaba.dubbo.common.URL;
-import com.alibaba.dubbo.common.extension.Adaptive;
 
 /**
  * Created by  liuyang
@@ -10,9 +9,11 @@ import com.alibaba.dubbo.common.extension.Adaptive;
  * cn.liuyangjob.dubbo.service
  * All Right Reserved by liuyang.
  **/
-@Adaptive
-public class AdaptiveCar implements car {
-
+public class AdaptiveCar implements Car {
+    private Car car;
+    public void setCar(Car car) {
+        this.car = car;
+    }
     @Override
     public void getColor() {
         System.out.println("adaptiveCar");
@@ -20,6 +21,7 @@ public class AdaptiveCar implements car {
 
     @Override
     public void getColorUrl(URL url) {
-        System.out.println("hahahahahah");
+        System.out.println("adaptive class");
+        car.getColorUrl(url);
     }
 }

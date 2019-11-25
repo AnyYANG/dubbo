@@ -1,6 +1,7 @@
 package cn.liuyangjob.dubbo.api;
 
 import com.alibaba.dubbo.common.URL;
+import com.alibaba.dubbo.common.extension.Adaptive;
 import com.alibaba.dubbo.common.extension.SPI;
 
 /**
@@ -10,7 +11,9 @@ import com.alibaba.dubbo.common.extension.SPI;
  * All Right Reserved by liuyang.
  **/
 @SPI
-public interface car {
+public interface Car {
     void getColor();
+    //@Adaptive("mycar")
+    @Adaptive("url.car")
     void getColorUrl(URL url);
 }

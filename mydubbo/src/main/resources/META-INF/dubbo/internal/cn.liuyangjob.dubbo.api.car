@@ -1,2 +1,3 @@
 black=cn.liuyangjob.dubbo.service.BlackCar
 red=cn.liuyangjob.dubbo.service.RedCar
+adaptivecar=cn.liuyangjob.dubbo.service.AdaptiveCar

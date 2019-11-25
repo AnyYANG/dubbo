@@ -1,7 +1,6 @@
 package cn.liuyangjob.dubbo.service;
 
-import cn.liuyangjob.dubbo.api.car;
-import com.alibaba.dubbo.common.Extension;
+import cn.liuyangjob.dubbo.api.Car;
 import com.alibaba.dubbo.common.URL;
 
 /**
@@ -10,7 +9,7 @@ import com.alibaba.dubbo.common.URL;
  * cn.liuyangjob.dubbo.service
  * All Right Reserved by liuyang.
  **/
-public class BlackCar  implements car {
+public class BlackCar  implements Car {
     @Override
     public void getColor() {
         System.out.println("BLACK");
@@ -18,7 +17,7 @@ public class BlackCar  implements car {
 
     @Override
     public void getColorUrl(URL url) {
-
+        System.out.println("black Car");
     }
 
 }

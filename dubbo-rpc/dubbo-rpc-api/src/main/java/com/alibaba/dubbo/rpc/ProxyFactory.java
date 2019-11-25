@@ -48,6 +48,7 @@ public interface ProxyFactory {
     /**
      * create invoker.
      *
+     *
      * @param <T>
      * @param proxy
      * @param type

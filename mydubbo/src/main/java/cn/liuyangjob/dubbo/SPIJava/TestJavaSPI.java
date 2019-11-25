@@ -1,6 +1,6 @@
 package cn.liuyangjob.dubbo.SPIJava;
 
-import cn.liuyangjob.dubbo.api.car;
+import cn.liuyangjob.dubbo.api.Car;
 
 import java.util.Iterator;
 import java.util.ServiceLoader;
@@ -14,8 +14,8 @@ import java.util.ServiceLoader;
 
 public class TestJavaSPI {
     public static void main(String args[]) {
-        ServiceLoader<car> carServiceLoader = ServiceLoader.load(car.class);
-        Iterator<car> cars = carServiceLoader.iterator();
+        ServiceLoader<Car> carServiceLoader = ServiceLoader.load(Car.class);
+        Iterator<Car> cars = carServiceLoader.iterator();
         cars.forEachRemaining(car->car.getColor());
     }
 }
