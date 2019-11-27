@@ -104,6 +104,7 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
                 logger.info("The service ready on spring started. service: " + getInterface());
             }
             export();
+            System.out.println("1111");
         }
     }
 
@@ -119,7 +120,9 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
     @Override
     @SuppressWarnings({"unchecked", "deprecation"})
     public void afterPropertiesSet() throws Exception {
+        System.out.println("2222");
         if (getProvider() == null) {
+            //如果provider 是空的  ，会去从spring中去取
             Map<String, ProviderConfig> providerConfigMap = applicationContext == null ? null : BeanFactoryUtils.beansOfTypeIncludingAncestors(applicationContext, ProviderConfig.class, false, false);
             if (providerConfigMap != null && providerConfigMap.size() > 0) {
                 Map<String, ProtocolConfig> protocolConfigMap = applicationContext == null ? null : BeanFactoryUtils.beansOfTypeIncludingAncestors(applicationContext, ProtocolConfig.class, false, false);

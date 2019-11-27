@@ -20,10 +20,6 @@ public class SPIDubboTest {
         URL url = new URL("dubbo","www.liuyang.com",10086,"path");
         url = url.addParameters("car","red");
         mycar.getColorUrl(url);
-        try {
-            System.in.read();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
     }
 }
